@@ -10,3 +10,6 @@ The app is supposed to :
 ## Design prototype/concept
 
 ![Main Activity Design Concept](/images/design_concept_latest_matches.png)
+
+
+<img data-canonical-src="/images/design_concept_latest_matches.png" height="50%" />
