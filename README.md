@@ -9,7 +9,4 @@ The app is supposed to :
 
 ## Design prototype/concept
 
-![Main Activity Design Concept](/images/design_concept_latest_matches.png)
-
-
-<img src="/images/design_concept_latest_matches.png" height="50%" width="50%" />
+<img src="/images/design_concept_latest_matches.png" height="25%" width="25%" />
