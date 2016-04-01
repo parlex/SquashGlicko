@@ -4,18 +4,63 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_corner">
 
-    <TextView
-        android:id="@+id/recycler_textview"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        android:background="@color/gray"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
-        android:layout_marginBottom="1dp"
-        android:textColor="@color/white"
-        />
+        android:columnCount="3"
+        android:rowCount="2"
+        android:alignmentMode="alignBounds"
+        android:useDefaultMargins="true"
+        android:rowOrderPreserved="false">
+
+        <TextView
+            android:id="@+id/player1Name"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Joakim"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/resultString"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Result"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/player2Name"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="Premer"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/player1Glicko"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="(1699)"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="0-11"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/player2Glicko"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="(2789)"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal"/>
+
+    </GridLayout>
 
 </LinearLayout>

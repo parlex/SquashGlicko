@@ -19,11 +19,22 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.View
     private ArrayList<Match> mDataset;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
+        public TextView mPlayer1NameTextView;
+        public TextView mPlayer2NameTextView;
+        public TextView mPlayer1GlickoTextView;
+        public TextView mPlayer2GlickoTextView;
+        public TextView mResultTextView;
+
+
 
         public ViewHolder(View v){
             super(v);
-            mTextView = (TextView) v.findViewById(R.id.recycler_textview);
+
+            mPlayer1NameTextView = (TextView) v.findViewById(R.id.player1Name);
+            mPlayer2NameTextView = (TextView) v.findViewById(R.id.player2Name);
+            mPlayer1GlickoTextView = (TextView) v.findViewById(R.id.player1Glicko);
+            mPlayer2GlickoTextView = (TextView) v.findViewById(R.id.player2Glicko);
+            mResultTextView = (TextView) v.findViewById(R.id.result);
         }
     }
 
@@ -46,7 +57,11 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.View
         Match match = mDataset.get(position);
         String result = match.getPlayer1() + " " + match.getPlayer1Score() + "-"
                 + match.getPlayer2Score() +" " + match.getPlayer2();
-        holder.mTextView.setText(result);
+        holder.mPlayer1NameTextView.setText(match.getPlayer1());
+        holder.mPlayer2NameTextView.setText(match.getPlayer2());
+        holder.mPlayer1GlickoTextView.setText("(1659)");
+        holder.mPlayer2GlickoTextView.setText("(2837)");
+        holder.mResultTextView.setText(match.getPlayer1Score() + " - " + match.getPlayer2Score());
     }
 
     @Override
